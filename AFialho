@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maria João Costa</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5dfe2;
+      color: #333;
+    }
+
+    .fundo {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: #f5dfe2;
+    }
+
+    .janela {
+      width: 100%;
+      max-width: 760px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 38px 42px;
+      background: #fff;
+      border: 1px solid #ead0d4;
+      border-top: 5px solid #8b2332;
+      border-radius: 8px;
+      box-shadow: 0 12px 36px rgba(100, 30, 40, 0.14);
+    }
+
+    .texto {
+      font-size: 15px;
+      line-height: 1.75;
+      text-align: justify;
+      overflow-wrap: break-word;
+    }
+
+    .texto p {
+      margin: 0 0 1em;
+    }
+
+    .texto p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
+      .fundo {
+        padding: 12px;
+      }
+
+      .janela {
+        padding: 25px 22px;
+        max-height: 95vh;
+      }
+
+      .texto {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="fundo">
+    <section class="janela">
+      <div class="texto">
+
+        <p>Ana Fialho é Professora Associada do Departamento de Gestão da Universidade de Évora, onde exerce funções docentes desde abril de 1991. Doutorada em Ciências Económicas e Empresariais (2004), desenvolveu um percurso académico, científico e institucional de mais de três décadas. Foi Pró-Reitora da Universidade de Évora entre 2022 e 2026, período durante o qual exerceu ainda as funções de Presidente do Conselho de Avaliação da Universidade de Évora e de Responsável pelo Cumprimento do Normativo, foi Sub Diretora da Escola de Ciências Sociais entre 2016 e 2019, Membro da Comissão de Horários da Escola de Ciências Sociais entre 2014 e 2018 e Diretora de Curso de Licenciatura em Gestão entre 2009 e 2013. É autora de várias publicações científicas indexadas na Scopus e no ABS e tem experiência na participação em projetos de investigação, na orientação de estudantes de licenciatura, mestrado e doutoramento, na avaliação científica de publicações e na avaliação e acreditação de cursos, colaborando regularmente com instituições nacionais e internacionais. É membro da Ordem de Contabilistas Certificados e da Ordem de Economistas.</p>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>
