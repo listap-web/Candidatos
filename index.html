@@ -39,6 +39,7 @@
       border-top: 5px solid #8b2332;
       border-radius: 8px;
       box-shadow: 0 12px 36px rgba(100, 30, 40, 0.14);
+      <button class="fechar" onclick="fecharJanela()" aria-label="Fechar janela">&times;</button>
     }
 
     .texto {
@@ -48,6 +49,25 @@
       overflow-wrap: break-word;
     }
 
+      .janela {
+  position: relative;
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #555;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.fechar:hover {
+  color: #000;
+}
     @media (max-width: 600px) {
       .fundo {
         padding: 12px;
@@ -66,6 +86,12 @@
   </style>
 </head>
 
+<script>
+  function fecharJanela() {
+    document.querySelector('.janela').style.display = 'none';
+  }
+</script>
+  
 <body>
   <main class="fundo">
     <section class="janela">
