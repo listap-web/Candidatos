@@ -4,62 +4,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>CV</title>
-
 <style>
-  body {
+  html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent !important;
     font-family: Arial, sans-serif;
-    background: transparent;
   }
 
-  /* Janela pequena, sem fundo cinzento */
-  .cv-window {
+  #cv {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: min(400px, calc(100vw - 40px));
-    min-height: 150px;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    min-height: 120px;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 35px 20px 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.15);
     text-align: center;
-    z-index: 9999;
-  }
-
-  .close {
-    position: absolute;
-    top: 6px;
-    right: 10px;
-    border: none;
-    background: transparent;
-    color: #555;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .cv-content {
-    margin-top: 25px;
-    font-size: 18px;
     color: #222;
+    z-index: 10;
+  }
+
+  #fechar {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: none;
+    border: 0;
+    font-size: 23px;
+    color: #555;
+    cursor: pointer;
   }
 </style>
 </head>
-
 <body>
-
-<div class="cv-window" id="cvWindow">
-  <button class="close" onclick="document.getElementById('cvWindow').style.display='none'"
-          aria-label="Fechar">&times;</button>
-
-  <div class="cv-content">teste</div>
-</div>
-
+  <div id="cv">
+    <button id="fechar" aria-label="Fechar"
+      onclick="document.getElementById('cv').remove()">×</button>
+    teste
+  </div>
 </body>
 </html>
