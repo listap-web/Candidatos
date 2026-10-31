@@ -29,17 +29,39 @@
     }
 
     .janela {
+      position: relative;
       width: 100%;
       max-width: 760px;
       max-height: 90vh;
       overflow-y: auto;
-      padding: 38px 42px;
+      padding: 48px 42px 38px;
       background: #fff;
       border: 1px solid #ead0d4;
       border-top: 5px solid #8b2332;
       border-radius: 8px;
       box-shadow: 0 12px 36px rgba(100, 30, 40, 0.14);
-      <button class="fechar" onclick="fecharJanela()" aria-label="Fechar janela">&times;</button>
+    }
+
+    .fechar {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      background: none;
+      border: none;
+      padding: 2px 6px;
+      font-size: 28px;
+      color: #555;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .fechar:hover {
+      color: #8b2332;
+    }
+
+    .fechar:focus-visible {
+      outline: 2px solid #8b2332;
+      outline-offset: 2px;
     }
 
     .texto {
@@ -49,32 +71,13 @@
       overflow-wrap: break-word;
     }
 
-      .janela {
-  position: relative;
-}
-
-.fechar {
-  position: absolute;
-  top: 10px;
-  right: 14px;
-  background: none;
-  border: none;
-  font-size: 28px;
-  color: #555;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.fechar:hover {
-  color: #000;
-}
     @media (max-width: 600px) {
       .fundo {
         padding: 12px;
       }
 
       .janela {
-        padding: 25px 22px;
+        padding: 42px 22px 25px;
         max-height: 95vh;
       }
 
@@ -86,25 +89,55 @@
   </style>
 </head>
 
-<script>
-  function fecharJanela() {
-    document.querySelector('.janela').style.display = 'none';
-  }
-</script>
-  
 <body>
   <main class="fundo">
-    <section class="janela">
+    <section class="janela" aria-label="Biografia de Maria João Costa">
+
+      <button
+        class="fechar"
+        type="button"
+        onclick="fecharJanela()"
+        aria-label="Fechar janela"
+        title="Fechar"
+      >&times;</button>
+
       <div class="texto">
-        Maria João Costa é Professora Catedrática do Departamento de Física da Universidade de Évora, onde exerce funções docentes desde dezembro de 1993. Doutorada em Física (2004) e Agregada em Física da Atmosfera e do Clima (2020), tem desenvolvido um percurso académico, científico e institucional de mais de três décadas.
+        Maria João Costa é Professora Catedrática do Departamento de Física
+        da Universidade de Évora, onde exerce funções docentes desde dezembro
+        de 1993. Doutorada em Física (2004) e Agregada em Física da Atmosfera
+        e do Clima (2020), tem desenvolvido um percurso académico, científico
+        e institucional de mais de três décadas.
 
-Foi Vice-Reitora da Universidade de Évora entre junho de 2025 e maio de 2026 e Presidente da Assembleia de Escola da Escola de Ciências e Tecnologia entre janeiro de 2023 e junho de 2025. Foi Diretora da Unidade de Investigação CREATE até junho de 2025 e coordenou cientificamente a sua candidatura, avaliada pela FCT com Muito Bom. Coordenou ainda o grupo de investigação em Atmosfera, Água e Clima do CGE/ICT entre 2009 e 2024.
+        Foi Vice-Reitora da Universidade de Évora entre junho de 2025 e maio
+        de 2026 e Presidente da Assembleia de Escola da Escola de Ciências e
+        Tecnologia entre janeiro de 2023 e junho de 2025. Foi Diretora da
+        Unidade de Investigação CREATE até junho de 2025 e coordenou
+        cientificamente a sua candidatura, avaliada pela FCT com Muito Bom.
+        Coordenou ainda o grupo de investigação em Atmosfera, Água e Clima
+        do CGE/ICT entre 2009 e 2024.
 
-Foi Diretora do Doutoramento em Ciências da Terra e do Espaço (2020–2025) e do Mestrado em Ciências da Terra e da Atmosfera (2010–2020). É autora de mais de 140 publicações científicas indexadas na Scopus e tem experiência na coordenação e participação em projetos de investigação, na orientação de estudantes de licenciatura, mestrado e doutoramento e na avaliação científica externa, colaborando regularmente com instituições nacionais e internacionais.
+        Foi Diretora do Doutoramento em Ciências da Terra e do Espaço
+        (2020–2025) e do Mestrado em Ciências da Terra e da Atmosfera
+        (2010–2020). É autora de mais de 140 publicações científicas
+        indexadas na Scopus e tem experiência na coordenação e participação
+        em projetos de investigação, na orientação de estudantes de
+        licenciatura, mestrado e doutoramento e na avaliação científica
+        externa, colaborando regularmente com instituições nacionais e
+        internacionais.
 
-É atualmente membro da Comissão Coordenadora de Avaliação da Escola de Ciências e Tecnologia e do Conselho Científico do Instituto de Investigação e Formação Avançada da Universidade de Évora, sendo também Presidente da Assembleia Geral da Associação Portuguesa de Meteorologia e Geofísica.
+        É atualmente membro da Comissão Coordenadora de Avaliação da Escola
+        de Ciências e Tecnologia e do Conselho Científico do Instituto de
+        Investigação e Formação Avançada da Universidade de Évora, sendo
+        também Presidente da Assembleia Geral da Associação Portuguesa de
+        Meteorologia e Geofísica.
       </div>
     </section>
   </main>
+
+  <script>
+    function fecharJanela() {
+      document.querySelector('.janela').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
