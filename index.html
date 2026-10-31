@@ -2,52 +2,35 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent !important;
-    font-family: Arial, sans-serif;
-  }
-
-  #cv {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 300px;
-    min-height: 120px;
-    box-sizing: border-box;
-    padding: 35px 20px 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(0,0,0,.15);
-    text-align: center;
-    color: #222;
-    z-index: 10;
-  }
-
-  #fechar {
-    position: absolute;
-    top: 5px;
-    right: 8px;
-    background: none;
-    border: 0;
-    font-size: 23px;
-    color: #555;
-    cursor: pointer;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: #222;
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <div id="cv">
-    <button id="fechar" aria-label="Fechar"
-      onclick="document.getElementById('cv').remove()">×</button>
-    teste
-  </div>
+  <a href="#" id="abrirCV">O teu nome</a>
+
+  <script>
+    document.getElementById("abrirCV").addEventListener("click", function(e) {
+      e.preventDefault();
+
+      window.open(
+        "cv.html",
+        "janelaCV",
+        "width=600,height=500,resizable=yes,scrollbars=yes"
+      );
+    });
+  </script>
 </body>
 </html>
